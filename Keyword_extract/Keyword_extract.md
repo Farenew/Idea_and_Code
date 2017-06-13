@@ -17,13 +17,17 @@ TF-IDF由两部分组成，一部分是**TF**，一部分是**IDF**，两部分�
 
 第一部分term frequency，**tf(t,d)**，表示t(text，词)在d(document，文件)中出现的频率，最简单的算法就是词频。即tf(t,d) = f(t,d)。
 其它常用的计算方法：
+
 ![Markdown](http://i1.buimg.com/589212/0eeca1eb2f08500a.png)
 
 第二部分inverse document frequency，**idf(t,D)**，表示t(词)在D(语料库)中出现的频率的逆序。基本的算法是：
+
 ![Markdown](http://i1.buimg.com/589212/af770f20d97ce2a4.png)
+
 这里的N值是语料库总文件数量，分母是有t出现的文档的数量。但这里可能为0，也就是说一个词可能在给定的语料库中并不出现，所以一个常用的手段就是在分母加1。
 
 TF-IDF就是把两部分相乘：
+
 ![Markdown](http://i1.buimg.com/589212/d43795e498552472.png)
 
 TF-IDF的用法简单，速度也比较快，目前得到了广泛的应用。其实可以想到，根据语料库的差异，我们能很容易给出不同领域不同用法的关键字。并且在jieba里支持自定义的语料库。但注意TF-IDF仅仅是一个heuristic technique(启发法)，也就是说它并没得到科学的证明。
@@ -173,6 +177,7 @@ Page的思路是这样的：一个page对另一个page的hyperlink表示为对�
 也就是说，一个PR高的页面，引用了一个页面，那么被引用的页面的PR也会变高，而一个页面引用的页面越多，那么它对于引用页面的PR贡献就越小。
 
 公式如下：
+
 ![Markdown](http://i1.buimg.com/589212/b5272f208d7ea9f0.png)
 
 - 这里c指的是正交因子，用来把全式子正交化。Bu表示了引用了u的全部page，Nv表示v page的全部hyperlink之和。
