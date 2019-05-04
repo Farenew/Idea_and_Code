@@ -8,3 +8,7 @@ Some demo code with idea behind.
 
 代码位置：
 [Keyword_extract](https://github.com/ForenewHan/Idea_and_Code/tree/master/Keyword_extract)
+
+## 2.0 使用位运算来进行基本遍历
+
+内容介绍: [使用位运算来进行基本遍历](https://github.com/ForenewHan/Idea_and_Code/blob/master/bitOperations/readme.md)
